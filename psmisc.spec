@@ -4,7 +4,7 @@
 #
 Name     : psmisc
 Version  : 22.21
-Release  : 11
+Release  : 12
 URL      : http://downloads.sourceforge.net/psmisc/psmisc-22.21.tar.gz
 Source0  : http://downloads.sourceforge.net/psmisc/psmisc-22.21.tar.gz
 Summary  : No detailed summary available
