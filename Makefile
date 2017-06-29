@@ -1,4 +1,5 @@
 PKG_NAME := psmisc
-URL := http://downloads.sourceforge.net/psmisc/psmisc-22.21.tar.gz
+URL := https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.1.tar.xz
+
 
 include ../common/Makefile.common
