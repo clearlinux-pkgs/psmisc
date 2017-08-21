@@ -4,7 +4,7 @@
 #
 Name     : psmisc
 Version  : 23.1
-Release  : 15
+Release  : 16
 URL      : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.1.tar.xz
 Source0  : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.1.tar.xz
 Summary  : No detailed summary available
