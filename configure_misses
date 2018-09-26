@@ -1,0 +1,13 @@
+Configure miss: struct user_regs_struct.orig_eax
+Configure miss: struct user_regs_struct.eax
+Configure miss: struct user_regs_struct.ebx
+Configure miss: struct user_regs_struct.ecx
+Configure miss: struct user_regs_struct.edx
+Configure miss: struct pt_regs.orig_gpr3
+Configure miss: struct pt_regs.gpr
+Configure miss: struct pt_regs.uregs
+Configure miss: struct pt_regs.regs
+Configure miss: struct pt_regs.cp0_status
+Configure miss: struct pt_regs.orig_d0
+Configure miss: struct pt_regs.d0
+Configure miss: whether lstat accepts an empty string
