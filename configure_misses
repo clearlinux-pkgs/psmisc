@@ -6,6 +6,7 @@ Configure miss: struct user_regs_struct.edx
 Configure miss: struct pt_regs.orig_gpr3
 Configure miss: struct pt_regs.gpr
 Configure miss: struct pt_regs.uregs
+Configure miss: struct user_pt_regs.regs
 Configure miss: struct pt_regs.regs
 Configure miss: struct pt_regs.cp0_status
 Configure miss: struct pt_regs.orig_d0
