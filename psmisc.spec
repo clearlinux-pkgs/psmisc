@@ -4,7 +4,7 @@
 #
 Name     : psmisc
 Version  : 23.3
-Release  : 21
+Release  : 22
 URL      : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.3.tar.xz
 Source0  : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.3.tar.xz
 Summary  : No detailed summary available
@@ -64,14 +64,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1578077699
+export SOURCE_DATE_EPOCH=1604874678
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static
 make  %{?_smp_mflags}
@@ -81,10 +81,10 @@ export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make VERBOSE=1 V=1 %{?_smp_mflags} check
+make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1578077699
+export SOURCE_DATE_EPOCH=1604874678
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/psmisc
 cp %{_builddir}/psmisc-23.3/COPYING %{buildroot}/usr/share/package-licenses/psmisc/74a8a6531a42e124df07ab5599aad63870fa0bd4
