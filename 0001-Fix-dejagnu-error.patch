@@ -1,0 +1,19 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Patrick McCarty <patrick.mccarty@intel.com>
+Date: Thu, 30 Sep 2021 15:58:27 -0700
+Subject: [PATCH] Fix dejagnu error
+
+This (empty) file exists in the upstream git repo but not in the source
+tarball... Adding it fixes an error raised by dejagnu 1.6.3:
+
+    ERROR: global config file ../testsuite/global-conf.exp not found.
+
+Signed-off-by: Patrick McCarty <patrick.mccarty@intel.com>
+---
+ testsuite/global-conf.exp | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 testsuite/global-conf.exp
+
+diff --git a/testsuite/global-conf.exp b/testsuite/global-conf.exp
+new file mode 100644
+index 0000000..e69de29

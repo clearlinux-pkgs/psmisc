@@ -6,7 +6,7 @@
 #
 Name     : psmisc
 Version  : 23.4
-Release  : 23
+Release  : 24
 URL      : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.4.tar.xz
 Source0  : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.4.tar.xz
 Source1  : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.4.tar.xz.asc
@@ -21,6 +21,7 @@ BuildRequires : dejagnu
 BuildRequires : expect
 BuildRequires : ncurses-dev
 BuildRequires : tcl
+Patch1: 0001-Fix-dejagnu-error.patch
 
 %description
 
@@ -61,21 +62,22 @@ man components for the psmisc package.
 %prep
 %setup -q -n psmisc-23.4
 cd %{_builddir}/psmisc-23.4
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1612811286
+export SOURCE_DATE_EPOCH=1633042890
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -87,7 +89,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1612811286
+export SOURCE_DATE_EPOCH=1633042890
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/psmisc
 cp %{_builddir}/psmisc-23.4/COPYING %{buildroot}/usr/share/package-licenses/psmisc/74a8a6531a42e124df07ab5599aad63870fa0bd4
