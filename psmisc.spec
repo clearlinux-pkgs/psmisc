@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x022166C0FF3C84E3 (csmall@debian.org)
 #
 Name     : psmisc
-Version  : 23.4
-Release  : 24
-URL      : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.4.tar.xz
-Source0  : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.4.tar.xz
-Source1  : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.4.tar.xz.asc
+Version  : 23.5
+Release  : 25
+URL      : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.5.tar.xz
+Source0  : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.5.tar.xz
+Source1  : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.5.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
@@ -60,8 +60,8 @@ man components for the psmisc package.
 
 
 %prep
-%setup -q -n psmisc-23.4
-cd %{_builddir}/psmisc-23.4
+%setup -q -n psmisc-23.5
+cd %{_builddir}/psmisc-23.5
 %patch1 -p1
 
 %build
@@ -69,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1633042890
+export SOURCE_DATE_EPOCH=1652116837
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -89,10 +89,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1633042890
+export SOURCE_DATE_EPOCH=1652116837
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/psmisc
-cp %{_builddir}/psmisc-23.4/COPYING %{buildroot}/usr/share/package-licenses/psmisc/74a8a6531a42e124df07ab5599aad63870fa0bd4
+cp %{_builddir}/psmisc-23.5/COPYING %{buildroot}/usr/share/package-licenses/psmisc/74a8a6531a42e124df07ab5599aad63870fa0bd4
 %make_install
 %find_lang psmisc
 

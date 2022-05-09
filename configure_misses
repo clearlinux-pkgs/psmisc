@@ -1,3 +1,4 @@
+Configure miss: g++ option to enable C++11 features
 Configure miss: po4a
 Configure miss: struct pt_regs.cp0_status
 Configure miss: struct pt_regs.d0
