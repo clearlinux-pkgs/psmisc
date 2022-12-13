@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x022166C0FF3C84E3 (csmall@debian.org)
 #
 Name     : psmisc
-Version  : 23.5
-Release  : 25
-URL      : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.5.tar.xz
-Source0  : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.5.tar.xz
-Source1  : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.5.tar.xz.asc
+Version  : 23.6
+Release  : 26
+URL      : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.6.tar.xz
+Source0  : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.6.tar.xz
+Source1  : https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.6.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
@@ -60,8 +60,8 @@ man components for the psmisc package.
 
 
 %prep
-%setup -q -n psmisc-23.5
-cd %{_builddir}/psmisc-23.5
+%setup -q -n psmisc-23.6
+cd %{_builddir}/psmisc-23.6
 %patch1 -p1
 
 %build
@@ -69,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1652116837
+export SOURCE_DATE_EPOCH=1670946876
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -89,10 +89,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1652116837
+export SOURCE_DATE_EPOCH=1670946876
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/psmisc
-cp %{_builddir}/psmisc-23.5/COPYING %{buildroot}/usr/share/package-licenses/psmisc/74a8a6531a42e124df07ab5599aad63870fa0bd4
+cp %{_builddir}/psmisc-%{version}/COPYING %{buildroot}/usr/share/package-licenses/psmisc/74a8a6531a42e124df07ab5599aad63870fa0bd4 || :
 %make_install
 %find_lang psmisc
 
@@ -115,6 +115,8 @@ cp %{_builddir}/psmisc-23.5/COPYING %{buildroot}/usr/share/package-licenses/psmi
 
 %files man
 %defattr(0644,root,root,0755)
+/usr/share/man/da/man1/prtstat.1
+/usr/share/man/da/man1/pslog.1
 /usr/share/man/de/man1/fuser.1
 /usr/share/man/de/man1/killall.1
 /usr/share/man/de/man1/peekfd.1
@@ -127,6 +129,18 @@ cp %{_builddir}/psmisc-23.5/COPYING %{buildroot}/usr/share/package-licenses/psmi
 /usr/share/man/fr/man1/prtstat.1
 /usr/share/man/fr/man1/pslog.1
 /usr/share/man/fr/man1/pstree.1
+/usr/share/man/hr/man1/fuser.1
+/usr/share/man/hr/man1/killall.1
+/usr/share/man/hr/man1/peekfd.1
+/usr/share/man/hr/man1/prtstat.1
+/usr/share/man/hr/man1/pslog.1
+/usr/share/man/hr/man1/pstree.1
+/usr/share/man/ko/man1/fuser.1
+/usr/share/man/ko/man1/killall.1
+/usr/share/man/ko/man1/peekfd.1
+/usr/share/man/ko/man1/prtstat.1
+/usr/share/man/ko/man1/pslog.1
+/usr/share/man/ko/man1/pstree.1
 /usr/share/man/man1/fuser.1
 /usr/share/man/man1/killall.1
 /usr/share/man/man1/peekfd.1
@@ -139,12 +153,30 @@ cp %{_builddir}/psmisc-23.5/COPYING %{buildroot}/usr/share/package-licenses/psmi
 /usr/share/man/pt_BR/man1/prtstat.1
 /usr/share/man/pt_BR/man1/pslog.1
 /usr/share/man/pt_BR/man1/pstree.1
+/usr/share/man/ro/man1/fuser.1
+/usr/share/man/ro/man1/killall.1
+/usr/share/man/ro/man1/peekfd.1
+/usr/share/man/ro/man1/prtstat.1
+/usr/share/man/ro/man1/pslog.1
+/usr/share/man/ro/man1/pstree.1
 /usr/share/man/ru/man1/fuser.1
 /usr/share/man/ru/man1/killall.1
 /usr/share/man/ru/man1/peekfd.1
 /usr/share/man/ru/man1/prtstat.1
 /usr/share/man/ru/man1/pslog.1
 /usr/share/man/ru/man1/pstree.1
+/usr/share/man/sr/man1/fuser.1
+/usr/share/man/sr/man1/killall.1
+/usr/share/man/sr/man1/peekfd.1
+/usr/share/man/sr/man1/prtstat.1
+/usr/share/man/sr/man1/pslog.1
+/usr/share/man/sr/man1/pstree.1
+/usr/share/man/sv/man1/fuser.1
+/usr/share/man/sv/man1/killall.1
+/usr/share/man/sv/man1/peekfd.1
+/usr/share/man/sv/man1/prtstat.1
+/usr/share/man/sv/man1/pslog.1
+/usr/share/man/sv/man1/pstree.1
 /usr/share/man/uk/man1/fuser.1
 /usr/share/man/uk/man1/killall.1
 /usr/share/man/uk/man1/peekfd.1
